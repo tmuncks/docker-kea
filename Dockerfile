@@ -26,8 +26,6 @@ RUN apk update && \
     apk del alpine-sdk git autoconf automake pkgconfig openssl-dev && \
     rm -rf /var/cache/apk/*
 
-RUN mkdir /etc/kea
-
 EXPOSE 67/udp
 
 CMD ["/usr/local/sbin/kea-dhcp4","-c","/etc/kea/kea-dhcp4.conf"]

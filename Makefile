@@ -1,6 +1,6 @@
 check_latest:
 	# determine latest version of kea
-	docker run --rm -ti alpine:edge ash -c 'echo "@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories ; apk update ; echo "-----"; apk search kea-dhcp4'
+	docker run --rm -ti alpine:edge ash -c 'echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories ; apk update ; echo "-----"; apk search kea-dhcp4'
 
 version = 1.5.0
 
